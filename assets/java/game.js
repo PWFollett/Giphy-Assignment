@@ -26,13 +26,13 @@ $.ajax({
 		image.attr("data-animate", giphyImgMotion);
 		image.addClass("giphyImgs");
 		topicDiv.prepend(image);
-		$("#animals").prepend(topicDiv);
+		$("#animal").prepend(topicDiv);
 		}
 	})
 }
 function renderButtons() {
-	$("#animalsButtons").empty();
-	
+	$("#animalButtons").empty();
+	console.log(topics)
 	for (var i = 0; i < topics.length; i++) {
 		var a = $("<button>");
 		a.addClass("topic");
@@ -46,7 +46,8 @@ function renderButtons() {
 $("#addAnimal").on("click", function(event) {
 	event.preventDefault();
     var topic = $("#animal-input").val().trim();
-    topics.push(topic);
+	topics.push(topic);
+	renderButtons();
     $("form").trigger("reset")
     });
 
