@@ -4,7 +4,7 @@ var topics = ["Dog", "Cat", "Goat", "Cow", "Beaver", "Frog", "Snake", "Bear"]
 
 function displayInfo() {
 	var outdoorAnimals = $(this).attr("data-name");
-    var queryURL =  "http://api.giphy.com/v1/gifs/search?q=" + outdoorAnimals+ "&api_key=ol7azSkKjUyK9PBSKSRLNN1AE1hZ4LLb&limit=5";
+    var queryURL =  "https://api.giphy.com/v1/gifs/search?q=" + outdoorAnimals+ "&api_key=ol7azSkKjUyK9PBSKSRLNN1AE1hZ4LLb&limit=5";
     console.log(queryURL)
 $.ajax({
 		url: queryURL, 
